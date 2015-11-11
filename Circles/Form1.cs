@@ -1,21 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Core;
+using Logic;
 
 namespace Circles
 {
     public partial class App : Form
     {
-        private const int scale = 26;
-
         private Graphics _fromGraphics;
         private float _xCenter;
         private float _yCenter;
@@ -32,11 +24,11 @@ namespace Circles
         {
             Pen brush = new Pen(color);
 
-            float x = (float) (circle.X - circle.Radius)*scale + _xCenter;
-            float y = (float) (pictureBox.Height - ((circle.Y - circle.Radius)*scale + _yCenter));
+            float x = (float) (circle.X - circle.Radius) + _xCenter;
+            float y = (float) (_yCenter - (circle.Y + circle.Radius));
 
             _fromGraphics.SmoothingMode = SmoothingMode.HighQuality;
-            _fromGraphics.DrawEllipse(brush, x, y, (float) circle.Radius * scale, (float) circle.Radius * scale);
+            _fromGraphics.DrawEllipse(brush, x, y, (float) circle.Radius * 2, (float) circle.Radius * 2);
 
             brush.Dispose();
         }

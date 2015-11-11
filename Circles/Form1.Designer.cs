@@ -190,6 +190,8 @@
             this.Controls.Add(this.X1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CheckButton);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "App";
             this.Text = "Circles";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

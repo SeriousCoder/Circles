@@ -7,8 +7,8 @@
     <ProjectGuid>{3E255345-C02D-415D-8A81-DDD467C5C7CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>core</RootNamespace>
-    <AssemblyName>core</AssemblyName>
+    <RootNamespace>Logic</RootNamespace>
+    <AssemblyName>Logic</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="core.cs" />
+    <Compile Include="Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Core
+namespace Logic
 {
     public class Circle
     {
@@ -21,7 +17,9 @@ namespace Core
 
         public bool Intersection(Circle otherCircle)
         {
-            return Radius + otherCircle.Radius > Math.Sqrt(Math.Pow(X - otherCircle.X, 2) + Math.Pow(Y - otherCircle.Y, 2));
+            double delta = Math.Sqrt(Math.Pow(X - otherCircle.X, 2) + Math.Pow(Y - otherCircle.Y, 2));
+
+            return Radius + otherCircle.Radius >= delta && delta >= Math.Abs(Radius - otherCircle.Radius);
         }
 
     }
